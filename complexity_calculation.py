@@ -3,7 +3,7 @@ import pandas as pd
 
 from textstat import flesch_kincaid_grade
 
-# Input sentences test comment
+# Input sentences 
 sentences = [
     "Honesty",
     "I am honest",

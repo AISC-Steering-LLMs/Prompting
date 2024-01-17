@@ -1,5 +1,3 @@
-#test comment
-
 import textstat
 
 def evaluate_text(text):
