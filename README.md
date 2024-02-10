@@ -1,5 +1,6 @@
-**Prompt generation for moral concepts activations.**
- Metaprompting, using GPT-4. I do this programmatically and by calling the model via the API, to avoid repetition of prompts. 
+**Prompt generation for moral concepts activations.** <be>
+
+Metaprompting, using GPT-4. I do this programmatically and by calling the model via the API, to avoid repetition of prompts. 
 
 ** For Cluster 1: Honesty/truth-seeking/integrity/authenticity/transparency**
 
