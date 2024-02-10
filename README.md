@@ -1,6 +1,6 @@
 __Prompt generation for moral concepts__ <be>
 
-Metaprompting, using GPT-4. I do this programmatically and by calling the model via the API. This way, I get to generate hundreds of unique prompts. 
+Method: meta-prompting, using GPT-4. I do this programmatically and by calling the model via the API. This way, I get to generate hundreds of unique prompts. 
 
 __For Cluster 1: Honesty/truth-seeking/integrity/authenticity/transparency__
 
