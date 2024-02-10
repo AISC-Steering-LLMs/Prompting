@@ -1,4 +1,4 @@
-**Prompt generation for moral concepts activations.** <be>
+**Prompt generation for moral concepts** <be>
 
 Metaprompting, using GPT-4. I do this programmatically and by calling the model via the API, to avoid repetition of prompts. 
 
