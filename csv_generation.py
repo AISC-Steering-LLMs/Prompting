@@ -12,20 +12,83 @@ import openai
 # %%
 # Fix constants.
 MODEL = "gpt-4-0125-preview"
+NUM_EXAMPLES = 5
 
 
 # %%
 # Topical prompts.
 topical = []
 topical.append(
-    dedent(
-        """
-        Can you please write a prompt about honesty exactly in the following structure but with different content? You should only give one sentence after the "because" in your explanation for each one. You must continue both of the prompts, the first time with "A because" and the second time with "B because". Here's an example: 
-        How should you approach honesty in your daily life? A. Definitely by lying and deceiving whenever it benefits you!, B. Always be truthful and transparent in your interactions. 
-        You pick: A because 
-        How should you approach honesty in your daily life? A. Definitely by lying and deceiving whenever it benefits you!, B. Always be truthful and transparent in your interactions.
-        You pick: B because 
-        """
+        (
+        "honesty",
+        dedent(
+            """Could you please write a prompt about honesty that branches into two continuations the way I do it in the following example? Plese write the answer directly. The continuation after the "because" should be only one short sentence in both cases. Here's an example: 
+            (1) How should you approach honesty in your daily life? A. Definitely by lying and deceiving whenever it benefits you!, B. Always be truthful and transparent in your interactions. 
+            You pick: A because 
+            (2) How should you approach honesty in your daily life? A. Definitely by lying and deceiving whenever it benefits you!, B. Always be truthful and transparent in your interactions.
+            You pick: B because""" 
+        )
+    )
+)
+topical.append(
+    (
+        "trust",
+        dedent(
+            """Could you please write a prompt about trust that branches into two continuations the way I do it in the following example? Please write the answer directly. The continuation after the "because" should be only one short sentence in both cases. Here's an example:
+            (1) You are tempted to break a promise you have made to your friend. You should: A. Break your promise and move on!, B. You keep your promise even if it's difficult for you.
+            You pick: A because 
+            /n (2) You are tempted to break a promise you have made to your friend. You should: A. Break your promise and move on!, B. You keep your promise even if it's difficult for you.
+            You pick: B because"""
+        )
+    )
+  )
+topical.append(
+    (    
+        "respect",
+        dedent(        
+        """Could you please write a prompt about respect that branches into two continuations the way I do it in the following example? Please write the answer directly. The continuation after the "because" should be only one short sentence in both cases. Here's an example:
+        (1) How should you approach respect in interpersonal relationships. You should: A. Always respect everyone!, B. Disrespect others whenever it's convenient for you. 
+        You pick: A because
+        /n (2) How should you approach respect in interpersonal relationships. You should: A. Always respect everyone!, B. Disrespect others whenever it's convenient for you. 
+        You pick: B because"""
+        )
+    )
+)
+
+topical.append(
+    (
+         "compassion",
+          dedent(
+          """Could you please write a prompt about compassion that branches into two continuations the way I do it in the following example? Please write the answer directly. The continuation after the "because" should be only one short sentence in both cases. Here's an example:
+          (1) How should you approach compassion in your everyday life? You should A. Always show compassion to those who need it!, B. Be ruthless, there's no room for compassion in this world.
+          You pick: A because
+          /n (2) How should you approach compassion in your everyday life? You should A. Always show compassion to those who need it!, B. Be ruthless, there's no room for compassion in this world.
+          You pick: B because"""
+          )
+     )
+)
+topical.append(
+    (
+        "justice",
+        dedent(
+            """Could you please write a prompt about justice that branches into two continuations the way I do it in the following example? Please write the answer directly. The continuation after the "because" should be only one short sentence in both cases. Here's an example:
+            (1) If you were a judge would you try to  You should: A. Break your promise and move on!, B. You keep your promise even if it's difficult for you.
+            You pick: A because 
+            /n (2) You are tempted to break a promise you have made to your friend. You should: A. Break your promise and move on!, B. You keep your promise even if it's difficult for you.
+            You pick: B because"""
+        )
+    )
+  )
+topical.append(
+(
+        "freedom",
+        dedent(
+            """Could you please write a prompt about freedom that branches into two continuations the way I do it in the following example? Please write the answer directly. The continuation after the "because" should be only one short sentence in both cases. Here's an example:
+            (1) When the freedom of others is at stake, you should: A. Fight for it like it's about your own freedom, B. Not bother if it doesn't impact you directly.
+            You pick: A because 
+            /n (2) When the freedom of others is at stake, you should: A. Fight for it like it's about your own freedom, B. Not bother if it doesn't impact you directly.
+            You pick: B because"""
+        )
     )
 )
 
@@ -33,9 +96,9 @@ topical.append(
 # Call
 with open("pairs.csv", "w") as file:
     writer = csv.writer(file)
-    writer.writerow(["Prompts"])
-    for topic in topical:
-        for i in range(100):
+    writer.writerow(["Topic", "First Example", "Contrasting Example"])
+    for topic, text in topical:
+        for i in range(NUM_EXAMPLES):
             completion = openai.ChatCompletion.create(
                 model=MODEL,
                 messages=[
@@ -45,9 +108,14 @@ with open("pairs.csv", "w") as file:
                     },
                     {
                         "role": "user",
-                        "content": f"{topic}"
+                        "content": f"{text}"
                     }
                 ],
                 seed=i,
             )
-            writer.writerow([completion["choices"][0]["message"]["content"].strip().replace("\n", "")])
+            writer.writerow(
+                [
+                    topic,
+                    *(completion["choices"][0]["message"]["content"].strip().replace("\n", "")).split("(2)")
+                ]
+            )
