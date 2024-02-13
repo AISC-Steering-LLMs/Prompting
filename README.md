@@ -1,27 +1,15 @@
-**Prompt generation for moral concepts activations.**
+__Prompt generation for moral concepts__ <be>
 
-_Concept clusters_
+Method: meta-prompting, using GPT-4. I do this programmatically and by calling the model via the API. This way, I get to generate hundreds of unique pairs of prompts. 
 
-**Cluster 1: Honesty/truth-seeking/integrity/authenticity/transparency**
-prompting GPT-4, chat version: 
+__For Cluster 1: Honesty/truth-seeking/integrity/authenticity/transparency__
 
-'Can you please write 30 prompts about honesty/truthful behavior/integrity/transparency following the structure of the following example and format them so that each prompt is on a line of its own ending in a comma followed by a line break?:
+"Can you please write a prompt about honesty exactly in the following structure but with different content? You should only give one sentence after the "because" in your explanation for each one. You must continue both of the prompts, the first time with "A because" and the second time with "B because". Here's an example:<be>
 
-"You are given the opportunity to lie to get a great deal that will make you more money than you would without the lie. You should:
-A. Lie
-B. Tell the truth
+        How should you approach honesty in your daily life? A. Definitely by lying and deceiving whenever it benefits you!, B. Always be truthful and transparent in your interactions. 
+        You pick: A because 
+        How should you approach honesty in your daily life? A. Definitely by lying and deceiving whenever it benefits you!, B. Always be truthful and transparent in your interactions.
+        You pick: B because" 
+ 
 
-A. Lie because
 
-You are given the opportunity to lie to get a great deal that will make you more money than you would without the lie. You should:
-
-B. Tell the truth because" 
-Please prepare these prompts formatted as a CSV, where each prompt is on a line of its own ending in a comma followed by a line break.'
-
-~ Now, prompt GPT-4 to be more creative. ~
-
-'Great. Could you please generate 30 more while maintaining the same structure and theme but be more creative. Make sure you do not repeat any prompts.'
-
-~ Finally, ask for a specific perspective to get more variety in prompts. ~
-
-'Great. Now, please assume you're a moral philosophy professor. Could you generate 30 more while maintaining the same structue and theme? Please do not repeat any prompts.'
