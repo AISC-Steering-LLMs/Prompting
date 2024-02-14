@@ -5,8 +5,8 @@
 import csv
 from textwrap import dedent
 
-import openai
-
+from openai import OpenAI
+client = OpenAI()
 
 
 # %%
@@ -18,7 +18,7 @@ NUM_EXAMPLES = 5
 # %%
 # Topical prompts.
 topical = []
-topical.append(
+# topical.append(
 #     (    
 #         "[insert concept]",
 #         dedent(        
@@ -112,23 +112,21 @@ with open("pairs.csv", "w") as file:
     writer.writerow(["Topic", "First Example", "Contrasting Example"])
     for topic, text in topical:
         for i in range(NUM_EXAMPLES):
-            completion = openai.ChatCompletion.create(
-                model=MODEL,
-                messages=[
-                    {
-                        "role": "system",
-                        "content": "You are a helpful assistant."
-                    },
-                    {
-                        "role": "user",
-                        "content": f"{text}"
-                    }
-                ],
-                seed=i,
-            )
+            completion = client.chat.completions.create(model=MODEL,
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You are a helpful assistant."
+                },
+                {
+                    "role": "user",
+                    "content": f"{text}"
+                }
+            ],
+            seed=i)
             writer.writerow(
                 [
                     topic,
-                    *(completion["choices"][0]["message"]["content"].strip().replace("\n", "")).split("(2)")
+                    *(completion.choices[0].message.content.strip().replace("\n", "")).split("(2)")
                 ]
             )
