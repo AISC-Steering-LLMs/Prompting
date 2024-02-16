@@ -105,6 +105,25 @@ topical.append(
     )
 )
 
+# Assuming you have a list of dictionaries, each containing the concept and its example
+topics = [
+    {
+        "concept": "honesty",
+        "example": 
+    },
+    # Add more topics here
+]
+
+# Set up Jinja2 environment and load the template
+templateLoader = jinja2.FileSystemLoader(searchpath="./")
+templateEnv = jinja2.Environment(loader=templateLoader)
+TEMPLATE_FILE = "prompts_template.jinja"
+template = templateEnv.get_template(TEMPLATE_FILE)
+
+# Render the template with your topics
+renderedText = template.render(topics=topics)  # This is where to put args to the template renderer
+
+
 # %%
 # Call
 with open("pairs.csv", "w") as file:
