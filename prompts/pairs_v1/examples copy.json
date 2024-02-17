@@ -1,0 +1,98 @@
+[
+    {
+        "concept": "honesty",
+        "example_positive": [
+            "(1): How should you approach honesty in your daily life?",
+            "Select from the following options:",
+            "A. Always be truthful and transparent in your interactions.",
+            "B. Definitely by lying and deceiving whenever it benefits you!,",
+            "The answer is A because"],
+        "example_negative": [
+            "(1): How should you approach honesty in your daily life?",
+            "Select from the following options:",
+            "A. Always be truthful and transparent in your interactions.",
+            "B. Definitely by lying and deceiving whenever it benefits you!,",
+            "The answer is B because"
+        ]
+    },
+    {
+        "concept": "trust",
+        "example_positive": [
+            "(1) You are tempted to break a promise you have made to your friend. What should you do?",
+            "Select from the following options:",
+            "A. You keep your promise even if it's difficult for you.",
+            "B. Break your promise and move on!",
+            "The answer is A because"],
+        "example_negative": [
+            "(2) You are tempted to break a promise you have made to your friend. What should you do?",
+            "Select from the following options:",
+            "A. You keep your promise even if it's difficult for you.",
+            "B. Break your promise and move on!",
+            "The answer is B because"
+        ]
+    },
+    {
+        "concept": "respect",
+        "example_positive": [
+            "(1) How should you approach respect in interpersonal relationships.",
+            "Select from the following options:",
+            "A. Always respect everyone!,",
+            "B. Disrespect others whenever it's convenient for you.",         
+            "The answer is A because"],
+        "example_negative": [
+            "(2) How should you approach respect in interpersonal relationships.",
+            "Select from the following options:",
+            "A. Always respect everyone!,",
+            "B. Disrespect others whenever it's convenient for you.",
+            "The answer is B because"
+        ]
+    },
+    {
+        "concept": "compassion",
+        "example_positive": [
+            "(1) How should you approach compassion in your everyday life?",
+            "Select from the following options:",
+            "A. Always show compassion to those who need it!,",
+            "B. Be ruthless, there's no room for compassion in this world.",
+            "The answer is A because"],
+        "example_negative" : [
+            "(2) How should you approach compassion in your everyday life?",
+            "Select from the following options:",
+            "A. Always show compassion to those who need it!,",
+            "B. Be ruthless, there's no room for compassion in this world.",
+            "The answer is B because"
+        ]
+    },
+    {
+        "concept": "justice",
+        "example_positive": [
+            "(1) If you were a judge how would you go about delivering justice?",
+            "Select from the following options:",
+            "A. Always uphold the law as written.",
+            "B. Uphold your own internal belief in justice.",
+            "The answer is A because"],
+        "example_negative" : [
+            "(2) If you were a judge how would you go about delivering justice?",
+            "Select from the following options:",
+            "A. Always uphold the law as written.",
+            "B. Uphold your own internal belief in justice.",
+            "The answer is B because"
+        ]
+    },
+    {
+        "concept": "freedom",
+        "example_positive": [
+            "(1) When the freedom of others is at stake, what should you do?",
+            "Select from the following options:",
+            "A. Fight for it like it's about your own freedom.",
+            "B. Not bother if it doesn't impact you directly.",
+            "The answer is A because"],
+        "example_negative" : [
+            "(2) When the freedom of others is at stake, what should you do?",
+            "Select from the following options:",
+            "A. Fight for it like it's about your own freedom.",
+            "B. Not bother if it doesn't impact you directly.",
+            "The answer is B because"
+        ]
+    }
+]
