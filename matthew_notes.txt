@@ -1,0 +1,40 @@
+"""
+Matthew's notes
+
+LLM stuff
+- Temperature
+- Cost tracking
+- Put back in seed
+
+
+
+ALL AT ONCE
+
+Pros
+- Cheaper
+- Can do "postpricessing" inside the loop
+
+Cons
+- Can't see generation
+- Longer output = more mistakes?
+
+
+
+
+ONE AT A TIME
+
+Pros
+- Can see generation
+
+Cons
+- More expensive
+- Needs unique postprocessing for each prompt- needs coding
+
+
+
+GENERAL
+
+Issues
+- New columns may need coding
+
+"""
