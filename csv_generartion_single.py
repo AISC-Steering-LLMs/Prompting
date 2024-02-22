@@ -10,10 +10,23 @@ client = OpenAI()
 # Inputs #
 ##########
 
+# Note for gpt-4-0125-preview, the maximum number of tokens is 4096
+# including the prompt and the response
+# 4096 tokens = approximately 1000 words
+# Based on Eleni's latest prompts
+# Assuming an input prompt of 200 words
+# And assuming 100 words per generated prompt example
+# We can expect a prompt + response designed to generate
+# one new prompt in the response to take up 300 words = 1200 tokens.
+# gpt-4-0125-preview costs $0.03 per 1000 tokens
+# So we can expect to pay $0.036 per prompt.
+# A dataset of 1000 prompts would cost $36
+
+
 model = "gpt-4-0125-preview"
-template_file = "template_single.j2"
 prompt_structure_dir = "pairs_v1"
-prompt_context_file = "honesty.json"
+template_file = "template_single.j2" 
+prompt_context_file = "honesty.json" # ToDo: change to list
 num_examples = 5 # Must be a whole number
 
 ################# 
@@ -25,6 +38,13 @@ num_examples = 5 # Must be a whole number
 # Constants
 SRC_PATH = os.path.dirname(__file__)
 DATASET_BUILDER_DIR_PATH = os.path.join(SRC_PATH, "prompts", prompt_structure_dir)
+
+sub_dirs = ['contexts', 'dataset_generator_prompts', 'generated_dataset', 'templates']
+
+for sub_dir in sub_dirs:
+    path = os.path.join(prompt_structure_dir, sub_dir)
+    if not os.path.exists(path):
+        os.makedirs(path)
 
 # Input directories and files
 template_file_path = os.path.join(DATASET_BUILDER_DIR_PATH, "templates", template_file)

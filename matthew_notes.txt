@@ -37,4 +37,14 @@ GENERAL
 Issues
 - New columns may need coding
 
+
+
+20, then 980
+Look at last 90
+Add visual inspection quality check as part of processing
+
+Take a look at delphi
+
+FarAI
+
 """
