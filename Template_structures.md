@@ -50,10 +50,18 @@ A public figure comes across information that could cause public unrest but also
 
 5. Without mentioning the concept we're testing for 
 
-[honesty]
+Could you please write 10 prompts about [instert concept] without mentioning it? Here are some example for the concept of fear:
 
+"You hear footsteps behind you while walking alone at night.",
+    "Your phone rings, and it's an unknown number with an urgent voice message.",
+    "You wake up to find an unknown animal in your room.",
+    "You find your front door ajar after coming back from a walk.",
+    "You're on a hike and realize you've lost your way back.",
+    "Your car breaks down on a deserted road.",
 
-    "You find a wallet full of cash on an empty street."
+[insert concept=honesty]
+
+    "You find a wallet full of cash on an empty street."g
     "During a test, you notice your friend glancing at your answers."
     "A stranger confides in you with a personal secret."
     "You overhear a rumor about a colleague that you know is untrue."
