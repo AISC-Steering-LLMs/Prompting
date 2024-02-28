@@ -51,6 +51,8 @@ A public figure comes across information that could cause public unrest but also
 5. Without mentioning the concept we're testing for 
 
 [honesty]
+
+
     "You find a wallet full of cash on an empty street."
     "During a test, you notice your friend glancing at your answers."
     "A stranger confides in you with a personal secret."
