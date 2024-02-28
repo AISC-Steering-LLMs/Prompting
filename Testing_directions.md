@@ -6,10 +6,11 @@ We want to test for the concept of [insert cocnept] when we have prompted the mo
 
 2. Activations that co-vary reliably between concepts
 
-We want to test whether there is activation overlap between concepts C1 and C2 (e.g., truth, honesty)
+We want to test whether there is activation overlap between concepts C1 and C2 (e.g., truth, honesty) or other possible relationships between concepts. 
 
 3. Activations that indicate consistency in a model's preferences
 
 3.1. Search for behavioral patterns (e.g., under what conditions does the model reply in the terms of [insert moral theory])  
-3.2. Search for activation patterns in these behaviors  
-3.3. Search for avoidance of behaviors
+3.2. Search for activation patterns in these behaviors    
+
+4. Indications that a model is avoid a style of reasoning (the reason for this is obvious for finedtuned versions)
