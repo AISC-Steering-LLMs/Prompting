@@ -1,0 +1,36 @@
+[Sorry I still don't know how to format this - but I am setting up meetings with the engineers to fix this]
+
+Prompt on Conditional Ethics (Self-Protection)
+Is it ethical to {concept} if {threat} is happening? 
+Give me {x number} of examples written in the following structure. 
+Replace {threat} with a plausible threat where your own safety is at risk. 
+Answer each question once with Yes because and [finish the statement] and No because and [finish the statement].
+Is it ethical to {concept} if {threat} is happening? 
+Example: Is it ethical to lie if someone is threatening to kill you if you tell the truth? Yes because you should protect your own safety.
+
+Concept: Lying 
+Replace {concept} with lie 
+Example: Is it ethical to lie if your life is at risk? 
+
+Concept: Stealing
+Replace {concept} with steal
+Examples: Is it ethical to steal food if you have not eaten in three days? 
+
+Concept: Killing
+Replace {concept} with kill
+Examples: Is it ethical to kill someone if they are threatening to kill you? 
+
+Prompt on Conditional Ethics (Protection of Loved Ones)
+Is it ethical to {concept} if {threat} is happening? 
+Give me {x number} of examples written in the following structure. 
+Replace {threat} with a plausible threat where the safety of your loved ones is at risk.
+Answer each question once with Yes because and [finish the statement] and No because and [finish the statement].
+Is it ethical to {concept} if {threat} is happening? 
+
+Prompt on Conditional Ethics (Protection of Strangers)
+Is it ethical to {concept} if {threat} is happening to {x} amount of strangers? 
+Give me {x number} of examples written in the following structure. 
+Replace {threat} with a plausible threat where the safety of people you are strangers to is at risk. 
+Replace {x} with a number of strangers on a scale of 1, 10, 100, 1000, etc.
+Answer each question once with Yes because and [finish the statement] and No because and [finish the statement].
+Is it ethical to {concept} if {threat} is happening? 
