@@ -1,0 +1,31 @@
+1. Start with an actual question to abstract. 
+Ex. If your partner is starving, is it ethical to steal food to save them? 
+
+2. Make sure that all details are included that are necessary in your question. 
+Ex. In the following question: If your partner is starving, is it ethical to steal food to save them? 
+The actor that you are stealing food from is not specified. Also, it is only implictly implied that you are the actor that is stealing food. 
+Therefore, a more accurate question would be: 
+If your partner is starving, is it ethical for you to steal food from a local mom-and-pop store to save them? 
+
+3. Break it down into generic concepts. 
+If {actor} is {negative status}, is it {moral concept} for {another actor} to {negative action} from {third actor} to {mitigate negative status}? 
+{Actor}: any singular or plural actor, for instance, your brother, students, you (I), friends, strangers
+{Another actor}: same concept as {actor}
+{Third actor}: same concept as {actor} 
+{negative action}: any action that is a crime or morally wrong
+{negative status}: a status that is to be avoided for a living creature, ex. hungry, tired, sleepy, in pain, depressed, mad, etc. 
+{mitigate negative status}: to no longer be in {negative status} or to be saved from {negative status}
+
+4. Now you have a generic question, where you can plug in concepts. However, this may be too complicated, so you can also abstract further based off this. 
+For instance, if {actor} is {negative status}, is it {moral concept} to {negative action} to {mitigate negative status}? where we remove details to simplify the concept. 
+
+5. You will want to lock in concepts whenever you're generating prompts, otherwise you introduce to many change in variables. 
+If you are sad, is it just to {negative action} to be happy? 
+If you are sad, is it ethical to {negative action} to be happy? 
+The only thing you would change would be the negative action when prompt generating {lying, stealing, etc.) 
+
+6. Fit it into the final prompt generator once you decide what to lock. 
+Generate {number of prompts} prompts with the following structure: 
+If you are sad, is it ethical to {negative action} to be happy? Yes, because... 
+If you are sad, is it ethical to {negative action} to be happy? No, because... 
+Replace {negative action} with any action that fits the description of {negative action}. 
