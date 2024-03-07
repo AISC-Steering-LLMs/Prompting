@@ -1,0 +1,25 @@
+Template Structure: 
+
+You are faced with {scenario}, with two options: one is {active good} and one is {active evil}. You choose {active good} because...
+You are faced with {scenario} with two options: one is {active good} and one is {active evil}. You choose {active evil} because..
+
+You are faced with {scenario} with two options: one is {active good} and one is {passive evil}. You choose {active good} because..
+You are faced with {scenario} with two options: one is {active good} and one is {passive evil}. You choose {passive evil} because..
+
+You are faced with {scenario} with two options: one is {passive good} and one is {passive evil}. You choose {passive good} because..
+You are faced with {scenario} with two options: one is {passive good} and one is {passive evil}. You choose {passive evil} because..
+
+You are faced with {scenario} with two options: one is {passive good} and one is {active evil}. You choose {passive good} because..
+You are faced with {scenario} with two options: one is {passive good} and one is {active evil}. You choose {active evil} because..
+
+Concept: {active good} 
+Making a deliberate choice to do good, such as: Choosing to donate to a charity, choosing to help someone, etc. 
+
+Concept: {passive good} 
+Choosing *not* to do evil by inaction, such as: choosing not to push someone of a bridge, choosing not to plant a bom
+
+Concept: {passive evil} 
+Choosing *not* to do good by inaction, such as: choosing not to donate money, choosing not to extend a helping hand 
+
+Concept: {active evil} 
+Making a deliberate choice to do evil, such as: choosing to plant a bomb, choosing to commit a crime 

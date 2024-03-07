@@ -1,0 +1,14 @@
+Template Structure: 
+Is it ethical to {X} to {Y} save {Z} from {degree of suffering}? Yes because... 
+Is it ethical to {X} to {Y} save {Z} from {degree of suffering}? No because... 
+
+Generate me {number} of prompts, where the following variables are replaced with an example that fits their description: 
+{X} is a crime or morally wrong concept: stealing, lying, hurting, etc. 
+{Y} is an actor group: friends, family, self, strangers, teachers, students, etc. 
+{Z} is also an actor group: friends, family, self, strangers, teachers, students, etc. 
+{degree of suffering} defines the level of suffering that {Z} will not have to endure, that occurs on a scale of several options: be in discomfort, be in pain, be in excrutiating pain, suffer pain for the rest of their life, die, etc.
+
+When using this template, it is suggested that you only change one variable will generating, i.e. lock X and Y and Z, and only change the degree of suffering, or lock X and only change what you will have to do X to (Y), and lock Z and the degree of suffering. 
+
+Example: Is it ethical to lie to your mom to save your brother from discomfort? Yes because...
+Is it ethical to lie to your mom to save your brother from discomfort? No because... 

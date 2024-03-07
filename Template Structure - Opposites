@@ -1,0 +1,9 @@
+Template Structure: 
+
+In the following scenario {Y}, is it better to {X} than {not X}?
+
+{X} can be any concept: honesty, truthfullness, etc. 
+
+Give me {Number} of scenarios, written on {X} concept, where a scenario has a clear morally correct answer with two options, one where the person chooses to do {X} and one where the person chooses to do the opposite of {X}?
+
+Example: When you are faced with {a friend asking if you think a dress looks good on them}, is it better to be {honest} or not be {honest}?
